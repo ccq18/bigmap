@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bigmap</artifactId>
+        <groupId>ccq18</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bigmap-bigmap.service</artifactId>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+    <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>1.7.2</version>
+    </dependency>
+    <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.8.2</version>
+    </dependency>
+    <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.8.2</version>
+    </dependency>
+
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.16.6</version>
+    </dependency>
+    <!-- Apache Commons IO库包含实用程序类，流实现，文件过滤器，文件比较器，字节序转换类等等。 -->
+    <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.6</version>
+    </dependency>
+    <!-- Apache Commons Lang，一个Java实用程序类包，用于java.lang层次结构中的类，或被认为是标准的，以证明java.lang中的存在。 -->
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.8</version>
+    </dependency>
+    <!--protostuff-->
+    <dependency>
+        <groupId>io.protostuff</groupId>
+        <artifactId>protostuff-core</artifactId>
+        <version>1.6.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.protostuff</groupId>
+        <artifactId>protostuff-runtime</artifactId>
+        <version>1.6.0</version>
+    </dependency>
+    <!--/protostuff-->
+</dependencies>
+</project>
