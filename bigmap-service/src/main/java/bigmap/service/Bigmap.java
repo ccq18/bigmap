@@ -102,6 +102,9 @@ public class Bigmap {
         try {
 
             DataItem v = map2.get(key);
+            if(v==null){
+                return null;
+            }
             raf.seek(v.getAt());
             byte[] bytes = new byte[v.getLen()];
             raf.read(bytes);

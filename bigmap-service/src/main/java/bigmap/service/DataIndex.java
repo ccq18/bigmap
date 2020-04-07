@@ -113,10 +113,14 @@ public class DataIndex {
             return DataIndex.di;
         }
         File file = new File(AppConstant.get("data.path") + "data-index.json");
+        if(!file.exists()){
+            DataIndex.di = new DataIndex();
+            return DataIndex.di ;
+        }
         byte[] index = FileUtils.readFileToByteArray(file);
-        DataIndex map2 = ProtostuffUtils.deserialize(index, DataIndex.class);
+        DataIndex.di = ProtostuffUtils.deserialize(index, DataIndex.class);
 
-        return map2;
+        return DataIndex.di ;
     }
 
     public void wirte() throws IOException {

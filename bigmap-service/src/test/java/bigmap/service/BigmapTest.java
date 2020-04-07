@@ -1,6 +1,7 @@
 package bigmap.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -18,25 +19,25 @@ public class BigmapTest {
         }
         return bigmap;
     }
+    
 
-    @Test
+    @Before
     public void init() throws IOException {
-        log.info("init");
         Map map = new HashMap<String, String>();
         this.getObj().write(map);
-        log.info("init end");
+        log.info("init");
     }
 
 
     @Test
     public void testDemo10() throws IOException {
-        this.init();
+        
         log.info("write");
         Map<String, String> map = new HashMap<>();
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000; i++) {
             StringBuffer buf = new StringBuffer();
             buf.append("hello");
-            for (int i2 = 0; i2 < 3000; i2++) {
+            for (int i2 = 0; i2 < 300; i2++) {
                 buf.append(Math.random());
             }
             map.put("key" + i, buf.toString());
@@ -48,14 +49,14 @@ public class BigmapTest {
 
     @Test
     public void testDemo11() throws IOException {
-        this.init();
+        
         log.info("writekey");
         getObj().init();
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000; i++) {
             StringBuffer buf = new StringBuffer();
             buf.append("hello");
-            for (int i2 = 0; i2 < 3000; i2++) {
+            for (int i2 = 0; i2 < 300; i2++) {
                 buf.append(Math.random());
             }
             getObj().writeKey("key" + i, buf.toString(), getObj().getDi(), getObj().getRaf());
@@ -68,13 +69,13 @@ public class BigmapTest {
 
     @Test
     public void testDemo12() throws IOException {
-        this.init();
+        
         log.info("writekey");
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000; i++) {
             StringBuffer buf = new StringBuffer();
             buf.append("hello");
-            for (int i2 = 0; i2 < 3000; i2++) {
+            for (int i2 = 0; i2 < 300; i2++) {
                 buf.append(Math.random());
             }
             getObj().writeKey("key" + i, buf.toString());
@@ -86,14 +87,14 @@ public class BigmapTest {
 
     @Test
     public void testDemo13() throws IOException {
-        this.init();
+        
         log.info("writekey2");
         getObj().init();
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000; i++) {
             StringBuffer buf = new StringBuffer();
             buf.append("hello");
-            for (int i2 = 0; i2 < 3000; i2++) {
+            for (int i2 = 0; i2 < 300; i2++) {
                 buf.append(Math.random());
             }
             getObj().writeKey2("key" + i, buf.toString(), getObj().getDi(), getObj().getRaf());
@@ -106,13 +107,12 @@ public class BigmapTest {
 
     @Test
     public void testDemo14() throws IOException {
-        this.init();
         log.info("writekey2");
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000; i++) {
             StringBuffer buf = new StringBuffer();
             buf.append("hello");
-            for (int i2 = 0; i2 < 3000; i2++) {
+            for (int i2 = 0; i2 < 300; i2++) {
                 buf.append(Math.random());
             }
             getObj().writeKey2("key" + i, buf.toString());
